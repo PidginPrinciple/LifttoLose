@@ -1,0 +1,47 @@
+buildscript {
+    repositories {
+        maven  { url 'http://repo1.maven.org/maven2' }
+        mavenLocal()
+        mavenCentral( )
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:0.9.+'
+    }
+}
+apply plugin: 'android'
+
+repositories {
+    maven  { url 'http://repo1.maven.org/maven2' }
+    mavenLocal()
+    mavenCentral( )
+}
+
+android {
+    compileSdkVersion 19
+    buildToolsVersion "20.0"
+
+    defaultConfig {
+        minSdkVersion 8
+        targetSdkVersion  20
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        debug {
+          //  applicationIdSuffix '.debug'
+            runProguard false
+        }
+
+        release {
+           // runProguard false
+           // proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile 'com.squareup.retrofit:retrofit:1.5.1'
+    compile 'com.cesarferreira.androidbootstrap:library:1.1.0@aar'
+    compile 'com.android.support:appcompat-v7:19+'
+}
