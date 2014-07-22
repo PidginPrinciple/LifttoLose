@@ -14,7 +14,7 @@ public class LifttoLose extends ActionBarActivity {
         setContentView(R.layout.mainlayout);
     }
 
-       // create options
+       // create options  menu
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
