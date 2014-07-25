@@ -3,12 +3,16 @@ buildscript {
         maven  { url 'http://repo1.maven.org/maven2' }
         mavenLocal()
         mavenCentral( )
+        jcenter()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:0.9.+'
+       // classpath 'com.android.tools.build:gradle:0.9.+'
+        classpath 'com.android.tools.build:gradle:0.11.0'
+        classpath 'me.champeau.gradle:gradle-groovy-android-plugin:0.2.1'
     }
 }
 apply plugin: 'android'
+apply plugin: 'me.champeau.gradle.groovy-android'
 
 repositories {
     maven  { url 'http://repo1.maven.org/maven2' }
@@ -44,4 +48,6 @@ dependencies {
     compile 'com.squareup.retrofit:retrofit:1.5.1'
     compile 'com.cesarferreira.androidbootstrap:library:1.1.0@aar'
     compile 'com.android.support:appcompat-v7:19+'
+    compile 'org.codehaus.groovy:groovy:2.4.0-beta-1:grooid'
+    compile 'net.sf.opencsv:opencsv:2.3'
 }
