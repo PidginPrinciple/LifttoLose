@@ -7,7 +7,7 @@ buildscript {
     }
     dependencies {
        // classpath 'com.android.tools.build:gradle:0.9.+'
-        classpath 'com.android.tools.build:gradle:0.11.0'
+        classpath 'com.android.tools.build:gradle:0.12.2'
         classpath 'me.champeau.gradle:gradle-groovy-android-plugin:0.2.1'
     }
 }
@@ -46,7 +46,7 @@ android {
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     compile 'com.squareup.retrofit:retrofit:1.5.1'
-    compile 'com.cesarferreira.androidbootstrap:library:1.1.0@aar'
+    compile 'com.cesarferreira.androidbootstrap:library:1.1.0'
     compile 'com.android.support:appcompat-v7:19+'
     compile 'org.codehaus.groovy:groovy:2.4.0-beta-1:grooid'
     compile 'net.sf.opencsv:opencsv:2.3'
