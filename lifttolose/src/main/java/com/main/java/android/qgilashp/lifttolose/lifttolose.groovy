@@ -1,6 +1,5 @@
 package com.main.java.android.qgilashp.lifttolose;
 
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle
 import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
@@ -8,7 +7,7 @@ import android.view.MenuItem
 import groovy.transform.CompileStatic;
 
 @CompileStatic
-public class LifttoLoser extends ActionBarActivity {
+public class LifttoLose extends ActionBarActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
