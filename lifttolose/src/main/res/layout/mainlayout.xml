@@ -47,7 +47,6 @@
         bootstrapbutton:bb_icon_right="fa-android"
         bootstrapbutton:bb_type="success"
         />
-    and
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
