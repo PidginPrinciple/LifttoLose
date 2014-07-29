@@ -39,7 +39,7 @@ public class testdisplay extends ActionBarActivity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        this.setContentView(R.layout.mainlayout);
+        setContentView(R.layout.mainlayout);
         addnoW = (Button) findViewById(R.id.addnow);
         testText = (EditText) findViewById(R.id.addition);
         testText .setImeOptions(EditorInfo.IME_FLAG_NO_EXTRACT_UI);
@@ -59,9 +59,9 @@ public class testdisplay extends ActionBarActivity {
         addnoW.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String filename = "teeeeeeest.csv";
-                String content = testText.getText().toString();
-                Integer integer = Integer.parseInt(content) + 2;
+                def filename = "teeeeeeest.csv";
+                def content = testText.getText().toString();
+                def integer = Integer.parseInt(content) + 2;
                 def result =  ["" + String.valueOf(integer) , "workout", "is", "cool", "and", "so", "are", "you", "haha"];
                 createFile(filename, result);
                 //textView.setText("The answer is " + readFile(filename));
@@ -86,7 +86,7 @@ public class testdisplay extends ActionBarActivity {
             File gpxfile = new File(root, fileName);
             FileWriter writer = new FileWriter(gpxfile);
             CSVWriter csvwrite = new CSVWriter(writer);
-            List<String[]> data = new ArrayList<String[]>();
+            def data = new ArrayList<String[]>();
             data.add(content);
             csvwrite.writeAll(data);
             csvwrite.flush();
