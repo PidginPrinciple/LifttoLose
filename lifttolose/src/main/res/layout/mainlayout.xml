@@ -8,7 +8,7 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
-    tools:context="com.main.java.android.qgilashp.lifttolose.LifttoLose">
+    tools:context="com.main.java.android.qgilashp.lifttolose.lifttoloser">
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -39,12 +39,15 @@
     <com.cesarferreira.androidbootstrap.BootstrapButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:text="Success"
+        android:layout_marginTop="90dp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentTop="true"
+        android:text="Add Now"
         android:id="@+id/addnow"
         bootstrapbutton:bb_icon_right="fa-android"
         bootstrapbutton:bb_type="success"
         />
+    and
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

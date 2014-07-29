@@ -62,7 +62,7 @@ public class testdisplay extends ActionBarActivity {
                 def filename = "teeeeeeest.csv";
                 def content = testText.getText().toString();
                 def integer = Integer.parseInt(content) + 2;
-                def result =  ["" + String.valueOf(integer) , "workout", "is", "cool", "and", "so", "are", "you", "haha"];
+                List<String[]> result =  ["" + String.valueOf(integer) , "workout", "is", "cool", "and", "so", "are", "you", "haha"];
                 createFile(filename, result);
                 //textView.setText("The answer is " + readFile(filename));
                 readFile(filename);
@@ -86,7 +86,7 @@ public class testdisplay extends ActionBarActivity {
             File gpxfile = new File(root, fileName);
             FileWriter writer = new FileWriter(gpxfile);
             CSVWriter csvwrite = new CSVWriter(writer);
-            def data = new ArrayList<String[]>();
+            List<String[]> data = new ArrayList<String[]>();
             data.add(content);
             csvwrite.writeAll(data);
             csvwrite.flush();
