@@ -8,20 +8,57 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
-    tools:context="com.main.java.android.qgilashp.lifttolose.LifttoLose">
-
+    tools:context="com.main.java.android.qgilashp.lifttolose.testdisplay">
     <TextView
-        android:text="@string/hello_world"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
-
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:text="YOu Suck"
+        tools:context=".Menu" android:id="@+id/textView3"/>
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2+?"
+        android:inputType="number"
+        android:id="@+id/addition" android:layout_alignParentLeft="true" android:layout_alignParentTop="true"
+        android:layout_marginTop="34dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Text"
+        android:maxLines="3"
+        android:id="@+id/textView" android:layout_alignLeft="@+id/addition" android:layout_alignParentTop="true"
+        android:layout_above="@+id/addition"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Testing addition"
+        android:id="@+id/textView1" android:layout_toRightOf="@+id/textView"
+        android:layout_alignTop="@+id/addition"/>
     <com.cesarferreira.androidbootstrap.BootstrapButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
         android:text="Success"
+        android:id="@+id/addnow"
         bootstrapbutton:bb_icon_right="fa-android"
         bootstrapbutton:bb_type="success"
         />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Result"
+        android:id="@+id/textView2"
+        android:layout_alignParentLeft="true" android:layout_marginLeft="19dp" android:layout_alignParentTop="true"
+        android:layout_marginTop="236dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Null"
+        android:id="@+id/result"
+        android:layout_alignRight="@+id/textView1" android:layout_alignParentTop="true"
+        android:layout_marginTop="233dp" android:visibility="invisible"/>
 
 </RelativeLayout>
+
