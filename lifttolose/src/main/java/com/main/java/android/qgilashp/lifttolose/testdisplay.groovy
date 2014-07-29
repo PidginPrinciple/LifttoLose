@@ -1,7 +1,9 @@
 package com.main.java.android.qgilashp.lifttolose;
 
+
 import android.os.Bundle;
 import android.os.Environment;
+import android.support.v7.app.ActionBarActivity;
 import android.view.View;
 import android.view.inputmethod.EditorInfo;
 import android.widget.Button;
@@ -9,11 +11,8 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 import au.com.bytecode.opencsv.CSVReader;
-import au.com.bytecode.opencsv.CSVWriter;
-import android.support.v7.app.ActionBarActivity
+import au.com.bytecode.opencsv.CSVWriter
 import groovy.transform.CompileStatic;
-
-//import com.example.BusandSherlock.R;
 
 import java.io.*;
 import java.util.ArrayList;
@@ -30,7 +29,7 @@ import java.util.List;
 public class testdisplay extends ActionBarActivity {
 
     private EditText testText;
-    private Button addnoW;
+    private com.cesarferreira.androidbootstrap.BootstrapButton addnoW;
     private TextView textView;
     //@InjectView(R.id.addnow) Button addnoW;
     String test = "Success";
@@ -39,8 +38,8 @@ public class testdisplay extends ActionBarActivity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        setContentView(R.layout.mainlayout);
-        addnoW = (Button) findViewById(R.id.addnow);
+        this.setContentView(R.layout.mainlayout);
+        addnoW = (com.cesarferreira.androidbootstrap.BootstrapButton) findViewById(R.id.addnow);
         testText = (EditText) findViewById(R.id.addition);
         testText .setImeOptions(EditorInfo.IME_FLAG_NO_EXTRACT_UI);
         textView = (TextView) findViewById(R.id.textView2  );
@@ -51,23 +50,23 @@ public class testdisplay extends ActionBarActivity {
      public void onClick(View v) {
          //To change body of implemented methods use File | Settings | File Templates.
                  Toast.makeText(testdisplay.this, test, Toast.LENGTH_SHORT).show();
-
+ kk
          }
-
      }); */
         //  Injector.inject(this);
         addnoW.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 def filename = "teeeeeeest.csv";
-                def content = testText.getText().toString();
-                def integer = Integer.parseInt(content) + 2;
-                List<String[]> result =  ["" + String.valueOf(integer) , "workout", "is", "cool", "and", "so", "are", "you", "haha"];
+                def content = testText.getText();
+                def integer = content + 2;
+                def list =  ["" + String.valueOf(integer) , "workout", "is", "cool", "and", "so", "are", "you", "haha"];
+                String [] result = list.toArray(new String[list.size()]);
                 createFile(filename, result);
                 //textView.setText("The answer is " + readFile(filename));
                 readFile(filename);
-                Toast.makeText(testdisplay.this, test, Toast.LENGTH_SHORT).show();
-
+              //  Toast.makeText(testdisplay.this, test, Toast.LENGTH_SHORT).show();
+                String name = "poop";
             }
         });
 
@@ -110,7 +109,7 @@ public class testdisplay extends ActionBarActivity {
             File root = new File(Environment.getExternalStorageDirectory(), "Noooootes");
 
             if(!root.exists()){
-                Toast.makeText(this, "Folder does not Exist", Toast.LENGTH_SHORT).show();
+               // Toast.makeText(this, "Folder does not Exist", Toast.LENGTH_SHORT).show();
 
             }
             gpxfile = new File(root, fileName);
@@ -128,13 +127,8 @@ public class testdisplay extends ActionBarActivity {
                        bum = row;
                 } */
                 for(int i = 0;i<row.length;i++){
-                    if(i==0){textView.setText(row[0] + " ");
-                    }else{
-                        if(i%3==0){
-                            textView.append("\n");
-                        }else
-                            textView.append(row[i] + " ");
-                    }
+                    if(i==0){textView.setText(row[0] + " ");  }else{
+                        if(i%3==0){textView.append("\n");}else{textView.append(row[i] + " ");}  }
                 }
                 //message.add(bum);
             }
