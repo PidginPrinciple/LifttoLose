@@ -51,16 +51,17 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Result"
+        android:freezesText="true"
         android:id="@+id/textView2"
         android:layout_alignParentLeft="true" android:layout_marginLeft="19dp" android:layout_alignParentTop="true"
         android:layout_marginTop="236dp"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Null"
+        android:text=""
         android:id="@+id/result"
         android:layout_alignRight="@+id/textView1" android:layout_alignParentTop="true"
-        android:layout_marginTop="233dp" android:visibility="invisible"/>
+        android:layout_marginTop="233dp" />
 
 </RelativeLayout>
 
